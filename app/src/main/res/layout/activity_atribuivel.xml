@@ -45,10 +45,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
     <Button
-        android:id="@+id/button_avancar_1_de_5"
+        android:id="@+id/button_avancar_3_de_5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Avançar 1/5"
+        android:text="Avançar 3/5"
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="64dp"
