@@ -36,13 +36,11 @@ class EspecificaActivity : AppCompatActivity(), View.OnClickListener  {
 
         val esp = EspecificaModel(0,expectativa,importancia,envolvidos,recursos)
 
-        var intencao= Intent (this,MensuravelActivity::class.java)
-        intencao.putExtra("estalo",textoEstalo)
-        intencao.putExtra("expectativa",expectativa)
-        intencao.putExtra("importancia",importancia)
-        intencao.putExtra("envolvidos",envolvidos)
-        intencao.putExtra("recursos",recursos)
+        var intencaoMensuravel= Intent (this,MensuravelActivity::class.java)
+        intencaoMensuravel.putExtra("estalo",textoEstalo)
 
-        startActivity(intencao)
+
+        startActivity(intencaoMensuravel)
+        finish()
     }
 }

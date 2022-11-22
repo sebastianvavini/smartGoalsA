@@ -1,5 +1,6 @@
 package com.codecomponents.smartgoalsa
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,7 +17,18 @@ class AtribuivelActivity : AppCompatActivity(), View.OnClickListener {
         binding.buttonAvancar3De5.setOnClickListener(this)
     }
 
-    override fun onClick(v: View?) {
-
+    override fun onClick(v: View) {
+        if(v.id==R.id.button_avancar_3_de_5){
+            validarAtribuivel()
+        }
+    }
+    fun validarAtribuivel(){
+        avancarParaRealista()
+    }
+    fun  avancarParaRealista(){
+        println("Avançar para Nova Activity - Realista")
+        var realistaIntent= Intent (this,RealistaActivity::class.java)
+        startActivity(realistaIntent)
+        finish()
     }
 }

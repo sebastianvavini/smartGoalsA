@@ -37,13 +37,12 @@ class MensuravelActivity : AppCompatActivity(), View.OnClickListener{
 
         // val esp = MensuravelModel(0,expectativa,expectativa,ponto_de_chegada,metricas)
 
-        var intencao= Intent (this,AtribuivelActivity::class.java)
-        intencao.putExtra("estalo",estalo)
-        intencao.putExtra("expectativa",expectativa)
-        intencao.putExtra("ponto_de_chegada",ponto_de_chegada)
-        intencao.putExtra("metricas",metricas)
+        var intencaoAtribuivel= Intent (this,AtribuivelActivity::class.java)
+        intencaoAtribuivel.putExtra("estalo",estalo)
 
 
-        startActivity(intencao)
+
+        startActivity(intencaoAtribuivel)
+        finish()
     }
 }
