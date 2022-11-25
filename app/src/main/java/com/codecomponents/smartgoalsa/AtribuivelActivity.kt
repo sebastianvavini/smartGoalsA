@@ -30,5 +30,6 @@ class AtribuivelActivity : AppCompatActivity(), View.OnClickListener {
         var realistaIntent= Intent (this,RealistaActivity::class.java)
         startActivity(realistaIntent)
         finish()
+
     }
 }
