@@ -10,7 +10,7 @@ class RealistaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding =ActivityRealistaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
 
     }
 }
