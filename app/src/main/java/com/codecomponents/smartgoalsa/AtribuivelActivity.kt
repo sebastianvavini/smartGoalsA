@@ -14,11 +14,11 @@ class AtribuivelActivity : AppCompatActivity(), View.OnClickListener {
         binding=ActivityAtribuivelBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.textViewEstalo.text=intent.getStringExtra("estalo").toString()
-        binding.buttonAvancar3De5.setOnClickListener(this)
+        binding.buttonAvancarParaRealista.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
-        if(v.id==R.id.button_avancar_3_de_5){
+        if(v.id==R.id.button_avancar_para_realista){
             validarAtribuivel()
         }
     }

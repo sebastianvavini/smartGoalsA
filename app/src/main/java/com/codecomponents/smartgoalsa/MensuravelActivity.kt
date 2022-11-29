@@ -15,11 +15,11 @@ class MensuravelActivity : AppCompatActivity(), View.OnClickListener{
         setContentView(binding.root)
         estalo=intent.getStringExtra("estalo").toString()
         binding.textViewEstalo.text=estalo
-        binding.buttonAvancar2De5.setOnClickListener(this)
+        binding.buttonAvancarParaAtribuivel.setOnClickListener(this)
 
     }
     override fun onClick(v: View) {
-        if(v.id==R.id.button_avancar_2_de_5){
+        if(v.id==R.id.button_avancar_para_atribuivel){
             validarMensuravel()
         }
     }

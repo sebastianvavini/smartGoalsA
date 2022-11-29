@@ -15,10 +15,10 @@ class EspecificaActivity : AppCompatActivity(), View.OnClickListener  {
         setContentView(binding.root)
         textoEstalo= intent.getStringExtra("estalo").toString()
         binding.textViewEstalo.text=textoEstalo
-        binding.buttonAvancar1De5.setOnClickListener(this)
+        binding.buttonAvancarParaMensuravel.setOnClickListener(this)
     }
     override fun onClick(v: View) {
-        if(v.id==R.id.button_avancar_1_de_5){
+        if(v.id==R.id.button_avancar_para_mensuravel){
             validarEspecifica()
 
         }
