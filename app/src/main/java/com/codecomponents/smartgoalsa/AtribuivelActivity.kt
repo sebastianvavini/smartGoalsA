@@ -13,7 +13,8 @@ class AtribuivelActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding=ActivityAtribuivelBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.textViewEstalo.text=intent.getStringExtra("estalo").toString()
+        estalo=intent.getStringExtra("estalo").toString()
+        binding.textViewEstalo.text=estalo
         binding.buttonAvancarParaRealista.setOnClickListener(this)
     }
 
@@ -26,9 +27,12 @@ class AtribuivelActivity : AppCompatActivity(), View.OnClickListener {
         avancarParaRealista()
     }
     fun  avancarParaRealista(){
-        println("Avançar para Nova Activity - Realista")
-        var realistaIntent= Intent (this,RealistaActivity::class.java)
-        startActivity(realistaIntent)
+
+
+           println("Avançar para Nova Activity - Realista")
+        var intenteRealista= Intent (this,RealistaActivity::class.java)
+        intenteRealista.putExtra("estalo",estalo)
+        startActivity(intenteRealista)
         finish()
 
     }
