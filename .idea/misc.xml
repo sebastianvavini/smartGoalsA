@@ -7,10 +7,10 @@
         <entry key="app/src/main/res/layout/activity_conclusao.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_especifica.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21920289855072464" />
-        <entry key="app/src/main/res/layout/activity_mensuravel.xml" value="0.21" />
-        <entry key="app/src/main/res/layout/activity_realista.xml" value="0.2234375" />
+        <entry key="app/src/main/res/layout/activity_mensuravel.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_realista.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_sala.xml" value="0.21" />
-        <entry key="app/src/main/res/layout/activity_temporal.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_temporal.xml" value="0.25" />
       </map>
     </option>
   </component>

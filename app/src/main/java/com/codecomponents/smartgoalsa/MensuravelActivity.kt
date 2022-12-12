@@ -9,6 +9,8 @@ import com.codecomponents.smartgoalsa.databinding.ActivityMensuravelBinding
 class MensuravelActivity : AppCompatActivity(), View.OnClickListener{
     private lateinit var binding:ActivityMensuravelBinding
     private lateinit var estalo:String
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityMensuravelBinding.inflate(layoutInflater)

@@ -40,6 +40,8 @@ class EspecificaActivity : AppCompatActivity(), View.OnClickListener  {
         intencaoMensuravel.putExtra("estalo",textoEstalo)
 
 
+
+
         startActivity(intencaoMensuravel)
         finish()
     }
