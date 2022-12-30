@@ -18,7 +18,7 @@ class Banco  (context: Context) :
 
     override fun onCreate(db: SQLiteDatabase) {
 
-        val tabela= Constants.TABLE.TABLE_NAME_USER
+       /** val tabela= Constants.TABLE.TABLE_NAME_USER
 
             val id= Constants.COLUMNS_USER.ID
             val username=Constants.COLUMNS_USER.USER
@@ -31,6 +31,8 @@ class Banco  (context: Context) :
                 "$id integer primary key autoincrement,"+
                 "$username text,"+ "$cpf text,"+ "$password text,"+"$whats text"+
                 ")")
+
+**/
 
         val tabela_meta = Constants.TABLE.TABLE_NAME_META
 
