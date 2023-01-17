@@ -1,5 +1,6 @@
 package com.codecomponents.smartgoalsa
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -36,8 +37,19 @@ class ConclusaoActivity : AppCompatActivity(), View.OnClickListener {
         // S.M.A.R.T
 
     }
-    override fun onClick(v: View?) {
+    override fun onClick(v: View) {
+        if(v.id==R.id.button_compartilhar_meta){
 
+            val myIntent =  Intent(Intent.ACTION_SEND);
+
+            myIntent.setType("text/plain");
+            val body = compilaTudo();
+            val sub = "Your Subject";
+            myIntent.putExtra(Intent.EXTRA_SUBJECT,sub);
+            myIntent.putExtra(Intent.EXTRA_TEXT,body);
+            startActivity(Intent.createChooser(myIntent, "Share Using"))
+
+        }
     }
     private fun especifica(){
         val expectativa=SharedData(this).getString("expectativa")
@@ -49,8 +61,8 @@ class ConclusaoActivity : AppCompatActivity(), View.OnClickListener {
         val envolvidos = SharedData(this).getString("envolvidos")
         binding.conclusaoEnvolvidos.text= "Estão envolvidos: ${envolvidos}"
 
-        val recursos_necessarios= SharedData(this).getString("recursos")
-        binding.conclusaoRecursosNecessarios.text="Possuo os recursos necessarios para alcancar a meta?: ${recursos_necessarios}"
+        val recursos_necessarios= SharedData(this).getString("recursosNecessarios")
+        binding.conclusaoRecursosNecessarios.text="Os recursos necessários são: ${recursos_necessarios}"
     }
     private fun mensuravel(){
         val expectativaEmNumeros =SharedData(this).getString("expectativaEmNumeros")
@@ -71,8 +83,8 @@ class ConclusaoActivity : AppCompatActivity(), View.OnClickListener {
         val orcamento = SharedData(this).getString("orcamento")
         binding.conclusaoRealistaTemOrcamento.text="O orçamento será de: ${orcamento}"
 
-        val recursosNecessarios= SharedData(this).getString("recursosNecessarios")
-        binding.conclusaoRecursosNecessarios.text="Os recursos necessário para atingir a meta são: ${recursosNecessarios}"
+        val recursosNecessarios= SharedData(this).getString("TemRecursosNecessarios")
+        binding.conclusaoRealistaTemRecursosNecessarios.text="Tem os Recursos necessários? ${recursosNecessarios}"
 
     }
     private fun temporal(){
@@ -82,6 +94,25 @@ class ConclusaoActivity : AppCompatActivity(), View.OnClickListener {
         val expectativaRazoavelPeriodo= SharedData(this).getString("expectativaRazoavelPeriodo")
         binding.conclusaoResultadoPlausivel.text=" Um resultado plausivel para o periodo é ${expectativaRazoavelPeriodo}"
 
+    }
+
+    private fun compilaTudo():String {
+
+       val result=""" 
+           META: ${binding.textViewEstalo.text}
+            ${binding.conclusaoExpectativa.text}
+            ${binding.conclusaoPorqueEImportante.text}
+            ${binding.conclusaoEnvolvidos.text}
+            ${binding.conclusaoRecursosNecessarios.text}
+            ${binding.conclusaoNumerosEsperados.text}
+            ${binding.conclusaoMensuravelFoiAlcancadaSe.text}
+            ${binding.conclusaoMensuravelMetricasAcompanhamento.text}
+            ${binding.conclusaoRealistaTemOrcamento.text}
+            ${binding.conclusaoRealistaTemRecursosNecessarios.text}
+            ${binding.conclusaoDataFinal.text}
+            ${binding.conclusaoResultadoPlausivel.text}
+        """.trimIndent()
+        return result
     }
 
 

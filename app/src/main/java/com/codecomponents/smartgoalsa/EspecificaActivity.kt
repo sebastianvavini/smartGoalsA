@@ -33,14 +33,14 @@ class EspecificaActivity : AppCompatActivity(), View.OnClickListener  {
         val expectativa=binding.editTextExpectativa.text.toString()
         val importancia=binding.editTextImportancia.text.toString()
         val envolvidos=binding.editTextEnvolvidos.text.toString()
-        val recursos= binding.editTextRecursosNecessarios.text.toString()
+        val recursosNecessarios= binding.editTextRecursosNecessarios.text.toString()
 
        // val esp = EspecificaModel(0,expectativa,importancia,envolvidos,recursos)
 
         SharedData(this).storeString("expectativa", expectativa)
         SharedData(this).storeString("importancia", importancia)
         SharedData(this).storeString("envolvidos", envolvidos)
-        SharedData(this).storeString("recursos", recursos)
+        SharedData(this).storeString("recursosNecessarios", recursosNecessarios)
 
 
         var intencaoMensuravel= Intent (this,MensuravelActivity::class.java)

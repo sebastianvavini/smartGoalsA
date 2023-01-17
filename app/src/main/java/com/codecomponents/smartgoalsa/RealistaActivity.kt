@@ -35,7 +35,7 @@ class RealistaActivity : AppCompatActivity(), View.OnClickListener {
         val recursosNecessarios=binding.editTextRecursosNecessarios.text.toString()
 
         SharedData(this).storeString("orcamento", orcamento)
-        SharedData(this).storeString("recursosNecessarios",recursosNecessarios)
+        SharedData(this).storeString("TemRecursosNecessarios",recursosNecessarios)
 
 
         var intenteTemporal= Intent (this,TemporalActivity::class.java)
