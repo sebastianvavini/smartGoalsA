@@ -70,7 +70,7 @@
         />
 
     <EditText
-        android:id="@+id/editText_recursos_disponiveis"
+        android:id="@+id/editText_recursos_necessarios"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -88,9 +88,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="64dp"
 
-        app:layout_constraintTop_toBottomOf="@+id/editText_recursos_disponiveis"
-        app:layout_constraintEnd_toEndOf="@+id/editText_recursos_disponiveis"
-        app:layout_constraintStart_toStartOf="@+id/editText_recursos_disponiveis"
+        app:layout_constraintTop_toBottomOf="@+id/editText_recursos_necessarios"
+        app:layout_constraintEnd_toEndOf="@+id/editText_recursos_necessarios"
+        app:layout_constraintStart_toStartOf="@+id/editText_recursos_necessarios"
 
         />
 

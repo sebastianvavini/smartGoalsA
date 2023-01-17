@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.codecomponents.smartgoalsa.databinding.ActivityAtribuivelBinding
+import com.codecomponents.smartgoalsa.shared.SharedData
 
 class AtribuivelActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityAtribuivelBinding
@@ -30,6 +31,10 @@ class AtribuivelActivity : AppCompatActivity(), View.OnClickListener {
 
 
            println("Avançar para Nova Activity - Realista")
+        val responsaveis= binding.editTextResponsaveis.text.toString()
+        SharedData(this).storeString("responsaveis", responsaveis)
+
+
         var intenteRealista= Intent (this,RealistaActivity::class.java)
         intenteRealista.putExtra("estalo",estalo)
         startActivity(intenteRealista)

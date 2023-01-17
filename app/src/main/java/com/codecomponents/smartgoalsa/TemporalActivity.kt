@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.codecomponents.smartgoalsa.databinding.ActivityTemporalBinding
+import com.codecomponents.smartgoalsa.shared.SharedData
 
 class TemporalActivity : AppCompatActivity() , View.OnClickListener{
     private lateinit var binding: ActivityTemporalBinding
@@ -27,6 +28,13 @@ class TemporalActivity : AppCompatActivity() , View.OnClickListener{
         avancarParaConclusao()
     }
     fun avancarParaConclusao(){
+
+        val dataFinal= binding.editTextDataFinal.text.toString()
+        val expectativaRazoavelPeriodo= binding.editTextOQuePodeSerAlcancado.text.toString()
+
+        SharedData(this).storeString("dataFinal",dataFinal)
+        SharedData(this).storeString("expectativaRazoavelPeriodo",expectativaRazoavelPeriodo)
+
         var intenteConclusao= Intent (this,ConclusaoActivity::class.java)
         intenteConclusao.putExtra("estalo",textoEstalo)
         startActivity(intenteConclusao)

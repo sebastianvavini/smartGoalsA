@@ -46,7 +46,7 @@
         />
 
     <EditText
-        android:id="@+id/editText_expectativa"
+        android:id="@+id/editText_expectativaNumerica"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -63,7 +63,7 @@
         android:textColor="@color/black"
         android:text="Como vou saber se minha meta foi alcançada?"
 
-        app:layout_constraintTop_toBottomOf="@+id/editText_expectativa"
+        app:layout_constraintTop_toBottomOf="@+id/editText_expectativaNumerica"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />

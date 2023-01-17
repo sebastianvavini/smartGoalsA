@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.codecomponents.smartgoalsa.databinding.ActivityRealistaBinding
+import com.codecomponents.smartgoalsa.shared.SharedData
 
 class RealistaActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityRealistaBinding
@@ -18,8 +19,6 @@ class RealistaActivity : AppCompatActivity(), View.OnClickListener {
         binding.buttonAvancarParaTemporal.setOnClickListener(this)
 
 
-
-
     }
 
     override fun onClick(v: View) {
@@ -31,6 +30,14 @@ class RealistaActivity : AppCompatActivity(), View.OnClickListener {
         avancarParaTemporal()
     }
     fun avancarParaTemporal(){
+
+        val orcamento=binding.editTextOrcamento.text.toString()
+        val recursosNecessarios=binding.editTextRecursosNecessarios.text.toString()
+
+        SharedData(this).storeString("orcamento", orcamento)
+        SharedData(this).storeString("recursosNecessarios",recursosNecessarios)
+
+
         var intenteTemporal= Intent (this,TemporalActivity::class.java)
         intenteTemporal.putExtra("estalo",textoEstalo)
         startActivity(intenteTemporal)

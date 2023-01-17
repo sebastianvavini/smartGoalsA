@@ -1,24 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="22dp"
     tools:context=".ConclusaoActivity">
 
-    <TextView
-        android:id="@+id/textView_estalo"
-        android:layout_width="0dp"
-        android:layout_marginTop="90dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:hint="Sua ideia"
-        android:textSize="30dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="29dp">
+            <TextView
+                android:id="@+id/textView_estalo"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="90dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:hint="Sua ideia"
+                android:textSize="30dp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                />
+
+            <TextView
+                android:id="@+id/conclusao_expectativa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="O que deseja alcançar?"
+
+                />
+            <TextView
+                android:id="@+id/conclusao_porque_e_importante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Por que esta meta é importante?"
+
+                />
+            <TextView
+                android:id="@+id/conclusao_envolvidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Quem são os envolvidos?"
+
+                />
+            <TextView
+                android:id="@+id/conclusao_recursosNecessarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Quais são os recursos necessários?"
+
+                />
+            <TextView
+                android:id="@+id/conclusao_numerosEsperados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Quais são os resultados eperados, em termos quantitativos?"
+
+
+                />
+            <TextView
+                android:id="@+id/conclusao_mensuravel_foi_alcancada_se"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Como vou saber se minha meta foi alcançada?"
+
+                />
+            <TextView
+                android:id="@+id/conclusao_mensuravel_metricas_acompanhamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Quais métricas podem ser usadas para acompanhar os resultados?"
+
+
+                />
+
+            <TextView
+                android:id="@+id/conclusao_atribuivel_equipes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Quais são as equipes ou pessoas responsáveis por alcançar a meta?"
+
+                />
+            <TextView
+                android:id="@+id/conclusao_realista_tem_orcamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tenho orçamento?"
+                android:textColor="@color/black"
+
+                />
+
+            <TextView
+                android:id="@+id/conclusao_realista_todos_recursos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Tenho todos os recursos necessarios para o alcance deste objetivo?"
+                />
+
+            <TextView
+                android:id="@+id/conclusao_data_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Qual é a data de Fim do projeto?"
+                android:textColor="@color/black"
+
+                />
+
+            <TextView
+                android:id="@+id/conclusao_resultado_plausivel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="O que pode ser alcançado neste periodo?"
+                android:textColor="@color/black"
+
+                />
+            <Button
+                android:id="@+id/button_compartilhar_meta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="Compartilhar"
+
+
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

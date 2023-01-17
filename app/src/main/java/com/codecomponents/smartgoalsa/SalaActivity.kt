@@ -50,13 +50,12 @@ class SalaActivity : AppCompatActivity(), View.OnClickListener {
 
         var descricaoMeta= binding.editEstalo.text.toString()
         var meta= MetaModel(0,descricaoMeta)
-        viewModel.insert(meta)
-        Toast.makeText(this,"Chamou insert, Amigo!",Toast.LENGTH_LONG).show()
+        //viewModel.insert(meta)
+        //Toast.makeText(this,"Chamou insert, Amigo!",Toast.LENGTH_LONG).show()
 
         var intencao= Intent (this,EspecificaActivity::class.java)
         intencao.putExtra("estalo",descricaoMeta)
 
-
-       // startActivity(intencao)
+        startActivity(intencao)
     }
 }

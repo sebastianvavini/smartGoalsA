@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.codecomponents.smartgoalsa.databinding.ActivityEspecificaBinding
+import com.codecomponents.smartgoalsa.shared.SharedData
 
 class EspecificaActivity : AppCompatActivity(), View.OnClickListener  {
     private lateinit var binding:ActivityEspecificaBinding
@@ -34,7 +35,13 @@ class EspecificaActivity : AppCompatActivity(), View.OnClickListener  {
         val envolvidos=binding.editTextEnvolvidos.text.toString()
         val recursos= binding.editTextRecursosNecessarios.text.toString()
 
-        val esp = EspecificaModel(0,expectativa,importancia,envolvidos,recursos)
+       // val esp = EspecificaModel(0,expectativa,importancia,envolvidos,recursos)
+
+        SharedData(this).storeString("expectativa", expectativa)
+        SharedData(this).storeString("importancia", importancia)
+        SharedData(this).storeString("envolvidos", envolvidos)
+        SharedData(this).storeString("recursos", recursos)
+
 
         var intencaoMensuravel= Intent (this,MensuravelActivity::class.java)
         intencaoMensuravel.putExtra("estalo",textoEstalo)
