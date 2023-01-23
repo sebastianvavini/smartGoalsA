@@ -53,66 +53,97 @@ class ConclusaoActivity : AppCompatActivity(), View.OnClickListener {
     }
     private fun especifica(){
         val expectativa=SharedData(this).getString("expectativa")
-        binding.conclusaoExpectativa.text="Espero: ${expectativa}"
+        binding.conclusaoExpectativa.text="Expectativa: ${expectativa}"
 
         val importancia= SharedData(this).getString("importancia")
-        binding.conclusaoPorqueEImportante.text="Esta meta é importante porque: ${importancia}"
+        binding.conclusaoPorqueEImportante.text="Importancia da META: ${importancia}"
 
         val envolvidos = SharedData(this).getString("envolvidos")
-        binding.conclusaoEnvolvidos.text= "Estão envolvidos: ${envolvidos}"
+        binding.conclusaoEnvolvidos.text= "Envolvidos: ${envolvidos}"
 
         val recursos_necessarios= SharedData(this).getString("recursosNecessarios")
-        binding.conclusaoRecursosNecessarios.text="Os recursos necessários são: ${recursos_necessarios}"
+        binding.conclusaoRecursosNecessarios.text="Recursos Necessários: ${recursos_necessarios}"
     }
     private fun mensuravel(){
         val expectativaEmNumeros =SharedData(this).getString("expectativaEmNumeros")
-        binding.conclusaoNumerosEsperados.text="Os números esperados são: ${expectativaEmNumeros}"
+        binding.conclusaoNumerosEsperados.text="Números esperados: ${expectativaEmNumeros}"
 
         val ponto_de_chegada= SharedData(this).getString("ponto_de_chegada")
         binding.conclusaoMensuravelFoiAlcancadaSe.text="A meta foi alcançada se: ${ponto_de_chegada}"
 
         val metricas_de_acompanhamento = SharedData(this).getString("metricas")
         binding.conclusaoMensuravelMetricasAcompanhamento.text=
-            "Os resultados serão acompanhados pelas metricas: ${metricas_de_acompanhamento}"
+            "Métricas de Acompanhamento: ${metricas_de_acompanhamento}"
     }
     private fun atribuivel(){
         val equipe_responsavel =SharedData(this).getString("responsaveis")
-        binding.conclusaoAtribuivelEquipes.text ="Os responsaveis pela execuçao da meta são: ${equipe_responsavel}"
+        binding.conclusaoAtribuivelEquipes.text ="Responsáveis pela Execução: ${equipe_responsavel}"
     }
     private fun realista(){
         val orcamento = SharedData(this).getString("orcamento")
-        binding.conclusaoRealistaTemOrcamento.text="O orçamento será de: ${orcamento}"
+        binding.conclusaoRealistaTemOrcamento.text="Orçamento: ${orcamento}"
 
         val recursosNecessarios= SharedData(this).getString("TemRecursosNecessarios")
-        binding.conclusaoRealistaTemRecursosNecessarios.text="Tem os Recursos necessários? ${recursosNecessarios}"
+        binding.conclusaoRealistaTemRecursosNecessarios.text="Tem os Recursos Necessários? ${recursosNecessarios}"
 
     }
     private fun temporal(){
         val dataFinal = SharedData(this).getString("dataFinal")
-        binding.conclusaoDataFinal.text="A data final desta meta é ${dataFinal}"
+        binding.conclusaoDataFinal.text="Data Final: ${dataFinal}"
 
         val expectativaRazoavelPeriodo= SharedData(this).getString("expectativaRazoavelPeriodo")
         binding.conclusaoResultadoPlausivel.text=" Um resultado plausivel para o periodo é ${expectativaRazoavelPeriodo}"
+
+    }
+    private fun checkout():String{
+
+        return "https://checkout.xgrow.com/47f2f63b-2071-4d1d-bbd2-0a84f83025ca/NzUxMA=="
 
     }
 
     private fun compilaTudo():String {
 
        val result=""" 
-           META: ${binding.textViewEstalo.text}
-            ${binding.conclusaoExpectativa.text}
-            ${binding.conclusaoPorqueEImportante.text}
-            ${binding.conclusaoEnvolvidos.text}
-            ${binding.conclusaoRecursosNecessarios.text}
-            ${binding.conclusaoNumerosEsperados.text}
-            ${binding.conclusaoMensuravelFoiAlcancadaSe.text}
-            ${binding.conclusaoMensuravelMetricasAcompanhamento.text}
-            ${binding.conclusaoRealistaTemOrcamento.text}
-            ${binding.conclusaoRealistaTemRecursosNecessarios.text}
-            ${binding.conclusaoDataFinal.text}
-            ${binding.conclusaoResultadoPlausivel.text}
+       META SMART: ${binding.textViewEstalo.text}
+       
+  Especifica:
+       ${binding.conclusaoExpectativa.text}
+                
+       ${binding.conclusaoPorqueEImportante.text}
+                
+       ${binding.conclusaoEnvolvidos.text}
+                
+       ${binding.conclusaoRecursosNecessarios.text}
+                
+   Mensurável:
+       ${binding.conclusaoNumerosEsperados.text}
+                
+       ${binding.conclusaoMensuravelFoiAlcancadaSe.text}
+                
+       ${binding.conclusaoMensuravelMetricasAcompanhamento.text}
+       
+   Atribuivel:
+       ${binding.conclusaoAtribuivelEquipes.text}
+       
+   Realista:        
+       ${binding.conclusaoRealistaTemOrcamento.text}
+                
+       ${binding.conclusaoRealistaTemRecursosNecessarios.text}
+           
+   Temporal:         
+       ${binding.conclusaoDataFinal.text}
+                
+       ${binding.conclusaoResultadoPlausivel.text} 
+        
+   ASSINE A SMARTGOALS E SEJA O PRIMEIRO A RECEBER AS NOVAS FUNCIONALIDADES:
+       ${checkout()}
+            
         """.trimIndent()
         return result
+
+
+
+
     }
 
 
