@@ -31,5 +31,4 @@ PAGAMENTO UNICO:
       https://checkout.xgrow.com/47f2f63b-2071-4d1d-bbd2-0a84f83025ca/ODE1NQ==
       
 ASSINATURA DE 7,50 SEMANAL
-
       https://checkout.xgrow.com/47f2f63b-2071-4d1d-bbd2-0a84f83025ca/NzUxMA==
