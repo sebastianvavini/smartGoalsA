@@ -25,6 +25,7 @@ Fonte:
 https://resultadosdigitais.com.br/vendas/metas-smart/
 
 MANTENHA ESSE PROJETO VIVO 
+
 DOAÇÕES: 
 
 PAGAMENTO UNICO:
