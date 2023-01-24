@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaslowClasseActivity">
+
+    <LinearLayout
+
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dbeceb"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Classificação de Sua Necessidade Segundo Maslow:"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <RadioButton
+                android:id="@+id/fisiologica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fisiológica"
+                />
+
+            <RadioButton
+                android:id="@+id/seguranca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Segurança"
+                />
+
+            <RadioButton
+                android:id="@+id/social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Social"
+                />
+
+            <RadioButton
+                android:id="@+id/estima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estima"
+                />
+
+            <RadioButton
+                android:id="@+id/realizacao_pessoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Realização Pessoal"
+                />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmar"/>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
