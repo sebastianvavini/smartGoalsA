@@ -14,6 +14,12 @@
         android:theme="@style/Theme.SmartGoalsA"
         tools:targetApi="31">
         <activity
+            android:name=".DemandaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OfertaActivity"
+            android:exported="false" />
+        <activity
             android:name=".MaslowClasseActivity"
             android:exported="false" />
         <activity

@@ -14,11 +14,14 @@ class SalaActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding:ActivitySalaBinding
     private lateinit var viewModel: CadastroMetaViewModel
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivitySalaBinding.inflate(layoutInflater)
         setContentView(binding.root)
        // var str= intent.getStringExtra("user_key")
+
 
        // binding.textViewWellCome.text="Bem Vindo, $str"
         binding.buttonValidar.setOnClickListener(this)
@@ -35,6 +38,7 @@ class SalaActivity : AppCompatActivity(), View.OnClickListener {
 
 
     }
+
     override fun onClick(v: View) {
         if(v.id==R.id.button_validar){
 
@@ -46,8 +50,59 @@ class SalaActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
     fun startValidation(){
 
+        if(binding.demanda.isChecked || binding.oferta.isChecked){
+
+
+
+            if(binding.demanda.isChecked){
+                Toast.makeText(this,"Pague sua Demanda",Toast.LENGTH_LONG).show()
+
+                chamarDemanda()
+            }
+            if(binding.oferta.isChecked){
+                Toast.makeText(this,"Receba por sua Oferta",Toast.LENGTH_LONG).show()
+                chamarOferta()
+            }
+
+        }
+        else{
+            Toast.makeText(this,"Responda se isso é uma Oferta ou uma Demanda",Toast.LENGTH_LONG).show()
+        }
+
+
+
+    }
+    fun chamarOferta(){
+
+        var descricaoMeta= binding.editEstalo.text.toString()
+        var meta= MetaModel(0,descricaoMeta)
+        //viewModel.insert(meta)
+        //Toast.makeText(this,"Chamou insert, Amigo!",Toast.LENGTH_LONG).show()
+
+        var intencao= Intent (this,OfertaActivity::class.java)
+        intencao.putExtra("estalo",descricaoMeta)
+
+        startActivity(intencao)
+
+    }
+    fun chamarDemanda(){
+
+        var descricaoMeta= binding.editEstalo.text.toString()
+        var meta= MetaModel(0,descricaoMeta)
+        //viewModel.insert(meta)
+        //Toast.makeText(this,"Chamou insert, Amigo!",Toast.LENGTH_LONG).show()
+
+        var intencao= Intent (this,DemandaActivity::class.java)
+        intencao.putExtra("estalo",descricaoMeta)
+
+        startActivity(intencao)
+
+    }
+
+    fun chamarEspecificação(){
         var descricaoMeta= binding.editEstalo.text.toString()
         var meta= MetaModel(0,descricaoMeta)
         //viewModel.insert(meta)
