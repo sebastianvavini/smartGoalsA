@@ -34,4 +34,18 @@
         app:layout_constraintEnd_toEndOf="@+id/text_Oferta_tela_Parcelamento"
         />
 
+    <Spinner
+        android:id="@+id/mySpinner"
+        android:layout_width="wrap_content"
+        android:spinnerMode="dialog"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Parcelamento da Oferta:"
+
+        app:layout_constraintTop_toTopOf="@+id/text_estalo_oferta_parcelamento"
+        app:layout_constraintStart_toStartOf="@+id/text_estalo_oferta_parcelamento"
+        app:layout_constraintEnd_toEndOf="@+id/text_estalo_oferta_parcelamento"
+
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

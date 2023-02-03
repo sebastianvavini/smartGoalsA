@@ -10,6 +10,7 @@ import com.codecomponents.smartgoalsa.data.model.MetaModel
 import com.codecomponents.smartgoalsa.databinding.ActivitySalaBinding
 import com.codecomponents.smartgoalsa.viewmodel.CadastroMetaViewModel
 
+
 class SalaActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding:ActivitySalaBinding
