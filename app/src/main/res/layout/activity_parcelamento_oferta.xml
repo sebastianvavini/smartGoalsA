@@ -33,6 +33,35 @@
         app:layout_constraintStart_toStartOf="@+id/text_Oferta_tela_Parcelamento"
         app:layout_constraintEnd_toEndOf="@+id/text_Oferta_tela_Parcelamento"
         />
+    <TextView
+        android:id="@+id/text_price_oferta_parcelamento"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:hint="Preço:"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="@+id/text_estalo_oferta_parcelamento"
+        app:layout_constraintStart_toStartOf="@+id/text_estalo_oferta_parcelamento"
+        app:layout_constraintEnd_toEndOf="@+id/text_estalo_oferta_parcelamento"
+        />
+
+    <TextView
+        android:id="@+id/text_recorrencia_oferta_parcelamento"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:hint="Recorrencia:"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="@+id/text_price_oferta_parcelamento"
+        app:layout_constraintStart_toStartOf="@+id/text_price_oferta_parcelamento"
+        app:layout_constraintEnd_toEndOf="@+id/text_price_oferta_parcelamento"
+        />
+
+
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -41,9 +70,9 @@
         android:layout_marginTop="39dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="@+id/text_estalo_oferta_parcelamento"
-        app:layout_constraintStart_toStartOf="@+id/text_estalo_oferta_parcelamento"
-        app:layout_constraintEnd_toEndOf="@+id/text_estalo_oferta_parcelamento">
+        app:layout_constraintTop_toTopOf="@+id/text_recorrencia_oferta_parcelamento"
+        app:layout_constraintStart_toStartOf="@+id/text_recorrencia_oferta_parcelamento"
+        app:layout_constraintEnd_toEndOf="@+id/text_recorrencia_oferta_parcelamento">
 
         <TextView
             android:id="@+id/msg"
