@@ -38,7 +38,7 @@ class OfertaOuDemandaActivity : AppCompatActivity(), View.OnClickListener {
 
 
             if(binding.demanda.isChecked){
-               
+
 
                 if(binding.fisiologica.isChecked || binding.seguranca.isChecked || binding.social.isChecked ||binding.estima.isChecked){
                     chamarDemanda()

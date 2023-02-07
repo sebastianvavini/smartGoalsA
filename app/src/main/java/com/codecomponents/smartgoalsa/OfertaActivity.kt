@@ -72,9 +72,11 @@ class OfertaActivity : AppCompatActivity(), View.OnClickListener {
         var meta= MetaModel(0,descricaoMeta)
         //viewModel.insert(meta)
         //Toast.makeText(this,"Chamou insert, Amigo!",Toast.LENGTH_LONG).show()
+        var preco= binding.editEstaloPreco.text.toString()
 
         var intencao= Intent (this,ParcelamentoOfertaActivity::class.java)
         intencao.putExtra("estalo",descricaoMeta)
+        intencao.putExtra("preco",preco)
 
         startActivity(intencao)
 
