@@ -15,6 +15,8 @@ class ParcelamentoOfertaActivity : AppCompatActivity(), AdapterView.OnItemSelect
     private lateinit var binding:ActivityParcelamentoOfertaBinding
     private lateinit var textoEstalo:String
     private lateinit var textoPrice:String
+    private lateinit var recorrencia:String
+
     var parcelas = arrayOf(
         "1x",
         "2x",
@@ -41,9 +43,11 @@ class ParcelamentoOfertaActivity : AppCompatActivity(), AdapterView.OnItemSelect
         setContentView(binding.root)
         textoEstalo= intent.getStringExtra("estalo").toString()
         textoPrice=intent.getStringExtra("preco").toString()
+        recorrencia=intent.getStringExtra("recorrencia").toString()
 
-       binding.textEstaloOfertaParcelamento.text=textoEstalo
-        binding.textPriceOfertaParcelamento.text=textoPrice
+        binding.textEstaloOfertaParcelamento.text=textoEstalo
+        binding.textPriceOfertaParcelamento.text="Preço: R$ ${textoPrice}"
+        binding.textRecorrenciaOfertaParcelamento.text="Recorrencia: ${recorrencia}"
 
        //----------------------
         spinnerMethod()

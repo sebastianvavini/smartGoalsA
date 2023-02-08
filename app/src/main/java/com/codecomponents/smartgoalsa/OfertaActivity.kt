@@ -12,6 +12,7 @@ class OfertaActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding:ActivityOfertaBinding
     private lateinit var textoEstalo:String
+    private lateinit var recorrencia:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,15 +48,16 @@ class OfertaActivity : AppCompatActivity(), View.OnClickListener {
 
             if(binding.PagamentoUnico.isChecked){
                 Toast.makeText(this,"Pagamento Unico Selecionado",Toast.LENGTH_LONG).show()
-
+                recorrencia="Anual"
 
             }
             if(binding.mensal.isChecked){
                 Toast.makeText(this,"Pagamento Mesal Selecionado",Toast.LENGTH_LONG).show()
-
+                recorrencia="Mensal"
             }
             if (binding.semanal.isChecked){
                 Toast.makeText(this,"Pagamento Semanal Selecionado",Toast.LENGTH_LONG).show()
+                recorrencia="Semanal"
             }
 
         }
@@ -77,6 +79,7 @@ class OfertaActivity : AppCompatActivity(), View.OnClickListener {
         var intencao= Intent (this,ParcelamentoOfertaActivity::class.java)
         intencao.putExtra("estalo",descricaoMeta)
         intencao.putExtra("preco",preco)
+        intencao.putExtra("recorrencia",recorrencia)
 
         startActivity(intencao)
 

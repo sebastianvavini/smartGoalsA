@@ -75,7 +75,7 @@
 
         android:id="@+id/root_layout"
         android:layout_width="350dp"
-        android:layout_height="300dp"
+        android:layout_height="335dp"
         android:orientation="vertical"
         android:layout_marginTop="150dp"
         android:padding="16dp"
