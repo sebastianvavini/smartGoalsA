@@ -16,6 +16,8 @@ class ParcelamentoOfertaActivity : AppCompatActivity(), AdapterView.OnItemSelect
     private lateinit var textoEstalo:String
     private lateinit var textoPrice:String
     private lateinit var recorrencia:String
+    private lateinit var qtdParcelas:String
+    private lateinit var valorParcela:String
 
     var parcelas = arrayOf(
         "1x",
@@ -72,9 +74,31 @@ class ParcelamentoOfertaActivity : AppCompatActivity(), AdapterView.OnItemSelect
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         textView_msg!!.text = "Parcelamento em : " + parcelas[position]
+        calcularParcela(parcelas[position])
     }
+
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
 
+    }
+    fun  calcularParcela(select:String){
+        if(select=="2x"){
+            calculaParcela2(2)
+        }
+        if(select=="3x"){
+            calculaParcela2(3)
+        }
+        if(select=="4x"){
+            calculaParcela2(4)
+        }
+        if(select=="5x"){
+            calculaParcela2(5)
+        }
+
+    }
+    fun calculaParcela2(qtd:Int){
+        valorParcela=(textoPrice.toDouble()/qtd).toString()
+        qtdParcelas=(qtd).toString()
+        binding.textParcelaQtdParcelas.text="${qtdParcelas} de ${valorParcela}"
     }
 }
