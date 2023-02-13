@@ -94,6 +94,28 @@ class ParcelamentoOfertaActivity : AppCompatActivity(), AdapterView.OnItemSelect
         if(select=="5x"){
             calculaParcela2(5)
         }
+        if(select=="6x"){
+            calculaParcela2(6)
+        }
+        if(select=="7x"){
+            calculaParcela2(7)
+        }
+
+        if(select=="8x"){
+            calculaParcela2(8)
+        }
+        if(select=="9x"){
+            calculaParcela2(9)
+        }
+        if(select=="10x"){
+            calculaParcela2(10)
+        }
+        if(select=="11x"){
+            calculaParcela2(11)
+        }
+        if(select=="12x"){
+            calculaParcela2(12)
+        }
 
     }
     fun calculaParcela2(qtd:Int){
