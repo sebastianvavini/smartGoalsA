@@ -82,6 +82,10 @@ class ParcelamentoOfertaActivity : AppCompatActivity(), AdapterView.OnItemSelect
 
     }
     fun  calcularParcela(select:String){
+
+        if(select=="1x"){
+            calculaParcela2(1)
+        }
         if(select=="2x"){
             calculaParcela2(2)
         }
