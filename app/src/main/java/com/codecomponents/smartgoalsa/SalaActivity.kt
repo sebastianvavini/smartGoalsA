@@ -55,7 +55,7 @@ class SalaActivity : AppCompatActivity(), View.OnClickListener {
 
     fun chamarOfertaOuDemanda(){
         var descricaoMeta= binding.editEstalo.text.toString()
-        var meta= MetaModel(0,descricaoMeta)
+      //  var meta= MetaModel(0,descricaoMeta)
         //viewModel.insert(meta)
         //Toast.makeText(this,"Chamou insert, Amigo!",Toast.LENGTH_LONG).show()
 
